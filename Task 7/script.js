@@ -1,4 +1,4 @@
-/* ------------------------------ TASK 7 -----------------------------------
+/*  ------------------------------ TASK 7 -----------------------------------
 Turimas "audi" objektas.
 
 Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
@@ -10,3 +10,9 @@ const audi = {
   year: 2005,
   color: 'white',
 };
+
+function showObjectKeys(obj){
+  return Object.keys(obj);
+}
+
+console.log(showObjectKeys(audi)); //['make', 'model', 'year', 'color']

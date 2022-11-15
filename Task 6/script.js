@@ -1,4 +1,4 @@
-/* ------------------------------ TASK 6 -----------------------------------
+/*  ------------------------------ TASK 6 -----------------------------------
 Turimas "users" masyvas. 
 
 Parašykite funckijas, kurios atliks nurodytas užduotis:
@@ -19,3 +19,23 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+/*
+  1. funkcija "getUserAverageAge" - kaip argumentą priims masyvą ir duoto masyvo 
+  atveju grąžins visų "users" amžiaus vidurkį kaip skaičių.
+*/
+function getUserAverageAge(arr) {
+  return arr.reduce((sum, x) => sum += x.age, 0) / arr.length;
+}
+
+/*
+  2. funkcija "getUsersNames" -  kaip argumentą priims masyvą ir duoto masyvo 
+  atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..]. 
+*/
+
+function getUsersNames(arr) {
+  return arr.map(x => x.name)
+}
+
+console.log(getUserAverageAge(users)); //30.77777777777778
+console.log(getUsersNames(users)); //['John Smith', 'Ann Smith', 'Tom Jones', 'Rose Peterson', 'Alex John', 'Ronald Jones', 'Elton Smith', 'Simon Peterson', 'Daniel Cane']
